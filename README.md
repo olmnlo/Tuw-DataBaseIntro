@@ -1,6 +1,6 @@
 # Tuw-DataBaseIntro
 ```sql
-DROP DATABASE store;
+DROP DATABASE IF EXISTS store;
 CREATE DATABASE IF NOT EXISTS store;
 USE store;
 
