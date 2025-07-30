@@ -80,7 +80,7 @@ INSERT INTO order_products (order_id, product_id, quantity) VALUES (3, 3, 1);
 INSERT INTO order_products (order_id, product_id, quantity) VALUES (4, 4, 2);
 INSERT INTO order_products (order_id, product_id, quantity) VALUES (5, 5, 3);
 
-#cheack tables before alter something
+#cheack tables before update or delete something
 SELECT * FROM countries;
 SELECT * FROM users;
 SELECT * FROM orders;
@@ -88,9 +88,36 @@ SELECT * FROM products;
 SELECT * FROM order_products;
 
 
+#before: 'Saudi Arabia', 'Asia'
 UPDATE countries
-SET continent_name = 'Middle East'
+SET name = 'Kingdom of Saudi Arabia'
 WHERE code = 1;
+SELECT * FROM countries WHERE code = 1;
+
+#before: 'Hussam Alghamdi', 'hussam@sa.com'
+UPDATE users
+SET full_name = 'Hussam Al-Ghamdi', email = 'hussam.alghamdi@ksa.com'
+WHERE id = 1;
+SELECT * FROM users WHERE id = 1;
+
+#before: 'start'
+UPDATE orders
+SET status = 'finish'
+WHERE id = 1;
+SELECT * FROM orders WHERE id = 1;
+
+#before: 80, 'valid'
+UPDATE products
+SET price = 100, status = 'expired'
+WHERE id = 1;
+SELECT * FROM products WHERE id = 1;
+
+#before: 2
+UPDATE order_products
+SET quantity = 10
+WHERE order_id = 1 AND product_id = 1;
+SELECT * FROM order_products WHERE order_id = 1 AND product_id = 1;
+
 
 # this the flow to delete one country
 DELETE FROM order_products
