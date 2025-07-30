@@ -90,13 +90,13 @@ SELECT * FROM order_products;
 
 #before: 'Saudi Arabia', 'Asia'
 UPDATE countries
-SET name = 'Kingdom of Saudi Arabia'
+SET name = 'KSA'
 WHERE code = 1;
 SELECT * FROM countries WHERE code = 1;
 
 #before: 'Hussam Alghamdi', 'hussam@sa.com'
 UPDATE users
-SET full_name = 'Hussam Al-Ghamdi', email = 'hussam.alghamdi@ksa.com'
+SET full_name = 'Hussam Al-Ghamdi', email = 'hus@ksa.com'
 WHERE id = 1;
 SELECT * FROM users WHERE id = 1;
 
@@ -143,6 +143,5 @@ SELECT * FROM users;
 SELECT * FROM orders;
 SELECT * FROM products;
 SELECT * FROM order_products;
-
 
 ```
